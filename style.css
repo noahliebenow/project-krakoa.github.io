@@ -1,4 +1,4 @@
-/* Project Krakoa - Main Stylesheet */
+/* Project Krakoa - Simple, Clean Stylesheet */
 
 * {
     margin: 0;
@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--white);
@@ -30,54 +30,13 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation */
-.navbar {
-    background: var(--white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 20px;
-}
-
-.logo h1 {
-    font-size: 1.8rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
-    padding: 120px 0;
+    padding: 100px 0;
     text-align: center;
-    min-height: 500px;
+    min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,38 +45,13 @@ body {
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    animation: fadeInDown 0.8s ease;
+    font-weight: 700;
 }
 
-.hero p {
+.hero .tagline {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    animation: fadeInUp 0.8s ease;
-}
-
-.hero .subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
     opacity: 0.95;
-}
-
-.cta-button {
-    display: inline-block;
-    background: var(--white);
-    color: var(--primary-color);
-    padding: 12px 32px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-    cursor: pointer;
-    border: none;
-    margin-top: 1rem;
-}
-
-.cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    font-weight: 300;
 }
 
 /* About Section */
@@ -126,195 +60,208 @@ body {
     background: var(--light-bg);
 }
 
-.about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: var(--text-dark);
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.about p {
+.about-content p {
     font-size: 1.1rem;
     color: var(--text-light);
     margin-bottom: 1.5rem;
     line-height: 1.8;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    text-align: left;
 }
 
-/* Features Section */
-.features {
+/* Updates Section */
+.updates {
     padding: 80px 0;
     background: var(--white);
 }
 
-.features h2 {
+.updates h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-align: center;
     color: var(--text-dark);
+    font-weight: 700;
 }
 
-.features-grid {
+.updates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.feature-card {
+.update-card {
     background: var(--light-bg);
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.update-date {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.update-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.update-card p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Apps Section */
+.apps {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.apps h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
     text-align: center;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.app-box {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
-    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
 }
 
-.feature-card:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+.app-box:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
 }
 
-.feature-icon {
+.app-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.feature-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
-}
-
-.feature-card p {
-    color: var(--text-light);
-    line-height: 1.6;
-}
-
-/* Contact Section */
-.contact {
-    padding: 80px 0;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
-}
-
-.contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    color: var(--text-dark);
-}
-
-.contact p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    text-align: center;
+.app-box h3 {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
-}
-
-.contact-info {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.contact-info a {
-    color: var(--primary-color);
-    text-decoration: none;
+    color: var(--text-dark);
     font-weight: 600;
-    transition: var(--transition);
 }
 
-.contact-info a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
+.app-box p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
-/* Footer */
-footer {
-    background: var(--dark-bg);
+.app-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.app-link {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.75rem 1rem;
+    background: var(--primary-color);
     color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
     text-align: center;
-    padding: 2rem 0;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 2px solid var(--primary-color);
 }
 
-/* Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.app-link:hover {
+    background: var(--white);
+    color: var(--primary-color);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-links {
-        gap: 1rem;
-    }
-
     .hero h1 {
         font-size: 2rem;
     }
 
-    .hero p {
-        font-size: 1.1rem;
+    .hero .tagline {
+        font-size: 1.2rem;
     }
 
-    .about h2,
-    .features h2,
-    .contact h2 {
+    .apps h2,
+    .updates h2 {
         font-size: 2rem;
     }
 
-    .features-grid {
-        grid-template-columns: 1fr;
+    .about-content p {
+        font-size: 1rem;
     }
 
-    .feature-card {
+    .app-box {
         padding: 1.5rem;
+    }
+
+    .app-links {
+        flex-direction: column;
+    }
+
+    .app-link {
+        min-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .navbar .container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .logo h1 {
-        font-size: 1.5rem;
+    .hero {
+        padding: 60px 0;
+        min-height: 300px;
     }
 
     .hero h1 {
         font-size: 1.5rem;
     }
 
-    .hero p {
+    .hero .tagline {
         font-size: 1rem;
     }
 
-    .hero .subtitle {
-        font-size: 0.95rem;
+    .about,
+    .updates,
+    .apps {
+        padding: 50px 0;
+    }
+
+    .apps h2,
+    .updates h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .apps-grid,
+    .updates-grid {
+        gap: 1.5rem;
     }
 }
