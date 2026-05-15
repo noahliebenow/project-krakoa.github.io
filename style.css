@@ -1,4 +1,4 @@
-/* Project Krakoa - Sophisticated Dark Theme */
+/* Project Krakoa - Japanese Woodblock Meets Steampunk */
 
 * {
     margin: 0;
@@ -8,14 +8,16 @@
 
 :root {
     --cream-bg: #e8e4d9;
-    --dark-navy: #1a2332;
-    --forest-green: #2d4a3f;
-    --garnet: #a82860;
-    --lapis: #2e5f9e;
-    --jade: #3d7d6d;
-    --text-white: #f5f5f5;
-    --text-light: #d0ccc4;
-    --accent-orange: #d97c42;
+    --dark-charcoal: #0f1419;
+    --deep-teal: #1a3a3a;
+    --forest-deep: #2a4a42;
+    --garnet: #8b2e5f;
+    --lapis: #1e3a52;
+    --jade: #2d5f52;
+    --gold-accent: #c4a050;
+    --copper: #a0674f;
+    --text-white: #f5f5f0;
+    --text-light: #c9c5ba;
     --transition: all 0.3s ease;
 }
 
@@ -24,10 +26,25 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Minion Pro', Georgia, 'Times New Roman', serif;
     background-color: var(--cream-bg);
-    color: var(--text-white);
-    line-height: 1.6;
+    background-image: 
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.01) 2px,
+            rgba(0, 0, 0, 0.01) 4px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.01) 2px,
+            rgba(0, 0, 0, 0.01) 4px
+        );
+    color: var(--dark-charcoal);
+    line-height: 1.7;
 }
 
 .container {
@@ -38,135 +55,251 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--dark-navy) 0%, var(--forest-green) 100%);
+    background: linear-gradient(135deg, var(--dark-charcoal) 0%, var(--deep-teal) 50%, var(--forest-deep) 100%);
     padding: 60px 0;
     margin: 40px 20px;
-    border-radius: 16px;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(196, 160, 80, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(160, 103, 79, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 1px,
+            rgba(0, 0, 0, 0.03) 1px,
+            rgba(0, 0, 0, 0.03) 2px
+        );
+    pointer-events: none;
 }
 
 .hero-content {
     max-width: 900px;
     margin: 0 auto;
     padding: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-eyebrow {
-    color: var(--accent-orange);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
+    color: var(--gold-accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
 }
 
 .hero h1 {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 3.5rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.8rem;
     font-weight: 700;
     color: var(--text-white);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     line-height: 1.1;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-light);
-    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    color: var(--gold-accent);
+    margin-bottom: 2.5rem;
     font-weight: 400;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-text {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.75rem;
 }
 
 .hero-text p {
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.85;
     color: var(--text-light);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Updates Section */
 .updates {
     background-color: var(--cream-bg);
-    padding: 80px 0;
+    padding: 100px 0;
+    position: relative;
+}
+
+.updates::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+    opacity: 0.3;
 }
 
 .updates h2 {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 2.5rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.8rem;
     font-weight: 700;
-    color: var(--dark-navy);
-    margin-bottom: 3rem;
+    color: var(--dark-charcoal);
+    margin-bottom: 3.5rem;
     text-align: left;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.updates h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--gold-accent);
 }
 
 .updates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .update-card {
-    background: var(--dark-navy);
-    padding: 2rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--accent-orange);
+    background: var(--deep-teal);
+    padding: 2.5rem;
+    border-radius: 1px;
+    border-left: 3px solid var(--gold-accent);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+
+.update-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(196, 160, 80, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.update-card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
 }
 
 .update-date {
-    color: var(--accent-orange);
-    font-size: 0.85rem;
+    color: var(--gold-accent);
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
     margin-bottom: 0.75rem;
+    opacity: 0.85;
 }
 
 .update-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0.75rem;
     color: var(--text-white);
     font-weight: 600;
+    font-family: 'Playfair Display', Georgia, serif;
 }
 
 .update-card p {
     color: var(--text-light);
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
 }
 
 /* Apps Section */
 .apps {
     background-color: var(--cream-bg);
-    padding: 80px 0;
+    padding: 100px 0;
+    position: relative;
+}
+
+.apps::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+    opacity: 0.3;
 }
 
 .apps h2 {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 2.5rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.8rem;
     font-weight: 700;
-    color: var(--dark-navy);
-    margin-bottom: 3rem;
+    color: var(--dark-charcoal);
+    margin-bottom: 3.5rem;
     text-align: left;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.apps h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--gold-accent);
 }
 
 .apps-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .app-box {
-    border-radius: 12px;
+    border-radius: 1px;
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
-    min-height: 400px;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+    min-height: 420px;
     position: relative;
     overflow: hidden;
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
     transition: var(--transition);
 }
 
@@ -178,53 +311,83 @@ body {
     right: 0;
     bottom: 0;
     background-image: 
-        linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.03) 49%, rgba(255, 255, 255, 0.03) 51%, transparent 52%),
-        linear-gradient(-45deg, transparent 48%, rgba(255, 255, 255, 0.03) 49%, rgba(255, 255, 255, 0.03) 51%, transparent 52%);
-    background-size: 60px 60px;
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 1px,
+            rgba(0, 0, 0, 0.04) 1px,
+            rgba(0, 0, 0, 0.04) 2px
+        );
     pointer-events: none;
     z-index: 1;
 }
 
+.app-box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    animation: subtle-shift 20s ease-in-out infinite;
+}
+
+@keyframes subtle-shift {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(10px, 10px); }
+}
+
 .app-cerebro {
-    background: linear-gradient(135deg, var(--garnet) 0%, rgba(168, 40, 96, 0.7) 100%);
+    background: linear-gradient(135deg, var(--garnet) 0%, rgba(139, 46, 95, 0.8) 100%);
     color: var(--text-white);
 }
 
 .app-forge {
-    background: linear-gradient(135deg, var(--lapis) 0%, rgba(46, 95, 158, 0.7) 100%);
+    background: linear-gradient(135deg, var(--lapis) 0%, rgba(30, 58, 82, 0.8) 100%);
     color: var(--text-white);
 }
 
 .app-sage {
-    background: linear-gradient(135deg, var(--jade) 0%, rgba(61, 125, 109, 0.7) 100%);
+    background: linear-gradient(135deg, var(--jade) 0%, rgba(45, 95, 82, 0.8) 100%);
     color: var(--text-white);
+}
+
+.app-box:hover {
+    box-shadow: 
+        0 16px 48px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    transform: translateY(-4px);
 }
 
 .app-header {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
     position: relative;
     z-index: 2;
 }
 
 .app-icon {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .app-box h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--text-white);
+    font-family: 'Playfair Display', Georgia, serif;
 }
 
 .app-description {
     font-size: 0.95rem;
-    line-height: 1.7;
+    line-height: 1.8;
     margin-bottom: auto;
     flex-grow: 1;
     position: relative;
@@ -238,7 +401,9 @@ body {
     gap: 1.5rem;
     position: relative;
     z-index: 2;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .app-links {
@@ -248,25 +413,27 @@ body {
 
 .app-link {
     flex: 1;
-    padding: 0.6rem 1rem;
-    background: rgba(255, 255, 255, 0.15);
+    padding: 0.7rem 1.25rem;
+    background: rgba(255, 255, 255, 0.12);
     color: var(--text-white);
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 4px;
+    border: 1px solid rgba(196, 160, 80, 0.3);
+    border-radius: 1px;
     text-align: center;
     font-weight: 500;
     font-size: 0.85rem;
     transition: var(--transition);
+    cursor: pointer;
 }
 
 .app-link:hover {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(196, 160, 80, 0.2);
+    border-color: var(--gold-accent);
+    color: var(--gold-accent);
 }
 
 .app-learn-more {
-    color: var(--accent-orange);
+    color: var(--gold-accent);
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
@@ -285,7 +452,6 @@ body {
 
     .hero {
         margin: 20px 10px;
-        border-radius: 12px;
     }
 
     .hero-content {
@@ -293,11 +459,11 @@ body {
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
     .apps h2,
@@ -306,15 +472,15 @@ body {
     }
 
     .app-header {
-        gap: 0.75rem;
+        gap: 1rem;
     }
 
     .app-icon {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 
     .app-box h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .app-links {
@@ -328,7 +494,7 @@ body {
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .apps h2,
