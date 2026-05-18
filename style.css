@@ -1,4 +1,4 @@
-/* Project Krakoa - Japanese Woodblock Meets Steampunk */
+/* Project Krakoa - Japanese Woodblock Meets Steampunk - Premium Edition */
 
 * {
     margin: 0;
@@ -290,165 +290,135 @@ body {
 }
 
 .app-box {
-    border-radius: 1px;
-    padding: 2.5rem;
+    border-radius: 4px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 420px;
+    min-height: 500px;
     position: relative;
-    overflow: hidden;
-    box-shadow: 
-        0 12px 40px rgba(0, 0, 0, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
     transition: var(--transition);
 }
 
-.app-box::before {
-    content: '';
+.app-box:hover {
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+    transform: translateY(-8px);
+}
+
+.app-background {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 1px,
-            rgba(0, 0, 0, 0.04) 1px,
-            rgba(0, 0, 0, 0.04) 2px
-        );
-    pointer-events: none;
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
     z-index: 1;
 }
 
-.app-box::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-    pointer-events: none;
-    animation: subtle-shift 20s ease-in-out infinite;
-}
-
-@keyframes subtle-shift {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(10px, 10px); }
-}
-
-.app-cerebro {
-    background: linear-gradient(135deg, var(--garnet) 0%, rgba(139, 46, 95, 0.8) 100%);
-    color: var(--text-white);
-}
-
-.app-forge {
-    background: linear-gradient(135deg, var(--lapis) 0%, rgba(30, 58, 82, 0.8) 100%);
-    color: var(--text-white);
-}
-
-.app-sage {
-    background: linear-gradient(135deg, var(--jade) 0%, rgba(45, 95, 82, 0.8) 100%);
-    color: var(--text-white);
-}
-
-.app-box:hover {
-    box-shadow: 
-        0 16px 48px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.12);
-    transform: translateY(-4px);
-}
-
-.app-header {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 1.75rem;
-    position: relative;
-    z-index: 2;
-}
-
-.app-icon {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.app-icon svg {
+.app-pattern {
     width: 100%;
     height: 100%;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    object-fit: cover;
 }
 
-.app-box h3 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--text-white);
-    font-family: 'Playfair Display', Georgia, serif;
+.app-cerebro .app-background {
+    background: linear-gradient(135deg, #1e3a52 0%, #0a1a28 100%);
+}
+
+.app-forge .app-background {
+    background: linear-gradient(135deg, #2a1810 0%, #0f0a05 100%);
+}
+
+.app-sage .app-background {
+    background: linear-gradient(135deg, #1a2a24 0%, #0d1612 100%);
+}
+
+.app-content {
+    flex-grow: 1;
+    padding: 2rem 2.5rem;
+    background: linear-gradient(to bottom, rgba(15, 20, 25, 0.9) 0%, rgba(15, 20, 25, 0.95) 100%);
+    z-index: 2;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
 }
 
 .app-description {
     font-size: 0.95rem;
     line-height: 1.8;
-    margin-bottom: auto;
-    flex-grow: 1;
-    position: relative;
-    z-index: 2;
     color: var(--text-light);
 }
 
 .app-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    position: relative;
+    padding: 2rem 2.5rem;
+    background: rgba(15, 20, 25, 0.98);
     z-index: 2;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.app-links {
+    position: relative;
+    border-top: 1px solid rgba(196, 160, 80, 0.15);
     display: flex;
-    gap: 0.75rem;
+    align-items: flex-end;
+    gap: 1.5rem;
 }
 
-.app-link {
-    flex: 1;
-    padding: 0.7rem 1.25rem;
-    background: rgba(255, 255, 255, 0.12);
+.app-badge {
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(196, 160, 80, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: rgba(196, 160, 80, 0.08);
+}
+
+.badge-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.app-title-section {
+    flex-grow: 1;
+}
+
+.app-title-section h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
     color: var(--text-white);
-    text-decoration: none;
-    border: 1px solid rgba(196, 160, 80, 0.3);
-    border-radius: 1px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 0.85rem;
-    transition: var(--transition);
-    cursor: pointer;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
 }
 
-.app-link:hover {
-    background: rgba(196, 160, 80, 0.2);
-    border-color: var(--gold-accent);
-    color: var(--gold-accent);
+.app-accent-line {
+    width: 30px;
+    height: 2px;
+    background: var(--gold-accent);
 }
 
-.app-learn-more {
+.app-launch {
     color: var(--gold-accent);
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
+    letter-spacing: 0.05em;
     transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
 }
 
-.app-learn-more:hover {
+.app-launch:hover {
     color: var(--text-white);
+}
+
+.app-launch .arrow {
+    transition: transform 0.3s ease;
+}
+
+.app-launch:hover .arrow {
+    transform: translateX(4px);
 }
 
 /* Responsive Design */
@@ -478,25 +448,25 @@ body {
         font-size: 2rem;
     }
 
-    .app-header {
-        gap: 1rem;
+    .app-box {
+        min-height: 450px;
     }
 
-    .app-icon {
-        width: 70px;
-        height: 70px;
+    .app-background {
+        height: 50%;
     }
 
-    .app-box h3 {
-        font-size: 1.3rem;
+    .app-footer {
+        flex-wrap: wrap;
     }
 
-    .app-links {
-        flex-direction: column;
+    .app-badge {
+        width: 50px;
+        height: 50px;
     }
 
-    .app-link {
-        width: 100%;
+    .app-title-section h3 {
+        font-size: 1.2rem;
     }
 }
 
@@ -511,16 +481,29 @@ body {
     }
 
     .app-box {
+        min-height: 400px;
+    }
+
+    .app-content,
+    .app-footer {
         padding: 1.5rem;
-        min-height: auto;
     }
 
     .app-description {
         font-size: 0.9rem;
     }
 
-    .app-icon {
-        width: 60px;
-        height: 60px;
+    .app-badge {
+        width: 45px;
+        height: 45px;
+    }
+
+    .badge-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .app-title-section h3 {
+        font-size: 1rem;
     }
 }
