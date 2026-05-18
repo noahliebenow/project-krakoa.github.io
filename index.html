@@ -55,10 +55,38 @@
             <div class="apps-grid">
                 <!-- Cerebro - Garnet -->
                 <div class="app-box app-cerebro">
-                    <div class="app-header">
-                        <div class="app-icon">
-                            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Cerebro: Neural Network / Synapses -->
+                    <div class="app-background">
+                        <svg class="app-pattern" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice">
+                            <defs>
+                                <radialGradient id="sphere-cerebro" cx="40%" cy="40%">
+                                    <stop offset="0%" style="stop-color:#6b8fb8;stop-opacity:0.3" />
+                                    <stop offset="100%" style="stop-color:#1a3a5c;stop-opacity:0.1" />
+                                </radialGradient>
+                            </defs>
+                            <!-- Central sphere with geometric pattern -->
+                            <circle cx="200" cy="200" r="120" fill="url(#sphere-cerebro)" stroke="#4a7ba7" stroke-width="1" opacity="0.4"/>
+                            <!-- Geodesic lines -->
+                            <circle cx="200" cy="200" r="100" fill="none" stroke="#5a9bc7" stroke-width="0.5" opacity="0.2"/>
+                            <circle cx="200" cy="200" r="80" fill="none" stroke="#5a9bc7" stroke-width="0.5" opacity="0.2"/>
+                            <!-- Grid points -->
+                            <circle cx="200" cy="100" r="2" fill="#7aabdb" opacity="0.4"/>
+                            <circle cx="260" cy="140" r="2" fill="#7aabdb" opacity="0.4"/>
+                            <circle cx="280" cy="200" r="2" fill="#7aabdb" opacity="0.4"/>
+                            <circle cx="260" cy="260" r="2" fill="#7aabdb" opacity="0.4"/>
+                            <circle cx="200" cy="300" r="2" fill="#7aabdb" opacity="0.4"/>
+                            <circle cx="140" cy="260" r="2" fill="#7aabdb" opacity="0.4"/>
+                            <circle cx="120" cy="200" r="2" fill="#7aabdb" opacity="0.4"/>
+                            <circle cx="140" cy="140" r="2" fill="#7aabdb" opacity="0.4"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="app-content">
+                        <p class="app-description">Advanced content analysis and intelligence gathering tool. Cerebro helps analysts process and synthesize large volumes of information quickly, identifying patterns and key insights.</p>
+                    </div>
+
+                    <div class="app-footer">
+                        <div class="app-badge">
+                            <svg class="badge-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
                                 <defs>
                                     <filter id="glow-cerebro">
                                         <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
@@ -68,7 +96,6 @@
                                         </feMerge>
                                     </filter>
                                 </defs>
-                                <!-- Central nodes -->
                                 <circle cx="60" cy="60" r="8" fill="#f5f5f0" filter="url(#glow-cerebro)"/>
                                 <circle cx="35" cy="35" r="6" fill="#f5f5f0"/>
                                 <circle cx="85" cy="35" r="6" fill="#f5f5f0"/>
@@ -76,95 +103,123 @@
                                 <circle cx="95" cy="60" r="6" fill="#f5f5f0"/>
                                 <circle cx="35" cy="85" r="6" fill="#f5f5f0"/>
                                 <circle cx="85" cy="85" r="6" fill="#f5f5f0"/>
-                                <!-- Connecting lines (synapses) -->
                                 <line x1="60" y1="60" x2="35" y2="35" stroke="#c4a050" stroke-width="1.5" opacity="0.6"/>
                                 <line x1="60" y1="60" x2="85" y2="35" stroke="#c4a050" stroke-width="1.5" opacity="0.6"/>
                                 <line x1="60" y1="60" x2="25" y2="60" stroke="#c4a050" stroke-width="1.5" opacity="0.6"/>
                                 <line x1="60" y1="60" x2="95" y2="60" stroke="#c4a050" stroke-width="1.5" opacity="0.6"/>
                                 <line x1="60" y1="60" x2="35" y2="85" stroke="#c4a050" stroke-width="1.5" opacity="0.6"/>
                                 <line x1="60" y1="60" x2="85" y2="85" stroke="#c4a050" stroke-width="1.5" opacity="0.6"/>
-                                <!-- Outer circuit ring -->
                                 <circle cx="60" cy="60" r="50" fill="none" stroke="#c4a050" stroke-width="1" opacity="0.3"/>
                             </svg>
                         </div>
-                        <h3>Cerebro</h3>
-                    </div>
-                    <p class="app-description">Advanced content analysis and intelligence gathering tool. Cerebro helps analysts process and synthesize large volumes of information quickly, identifying patterns and key insights.</p>
-                    <div class="app-footer">
-                        <div class="app-links">
-                            <a href="#" class="app-link">Launch App</a>
-                            <a href="#" class="app-link">Tutorial</a>
+                        <div class="app-title-section">
+                            <h3>CEREBRO</h3>
+                            <div class="app-accent-line"></div>
                         </div>
-                        <a href="#" class="app-learn-more">Learn more →</a>
+                        <a href="#" class="app-launch">LAUNCH <span class="arrow">→</span></a>
                     </div>
                 </div>
 
                 <!-- Forge - Lapis -->
                 <div class="app-box app-forge">
-                    <div class="app-header">
-                        <div class="app-icon">
-                            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Forge: Anvil with hammer and spark -->
-                                <!-- Anvil base -->
+                    <div class="app-background">
+                        <svg class="app-pattern" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice">
+                            <defs>
+                                <radialGradient id="anvil-forge" cx="50%" cy="50%">
+                                    <stop offset="0%" style="stop-color:#d97c42;stop-opacity:0.4" />
+                                    <stop offset="100%" style="stop-color:#8b4513;stop-opacity:0.1" />
+                                </radialGradient>
+                            </defs>
+                            <!-- Heat glow -->
+                            <circle cx="200" cy="280" r="150" fill="url(#anvil-forge)" opacity="0.6"/>
+                            <!-- Hammer shape suggestion -->
+                            <rect x="180" y="120" width="40" height="100" fill="none" stroke="#d97c42" stroke-width="1" opacity="0.2"/>
+                            <!-- Anvil suggestion -->
+                            <rect x="120" y="240" width="160" height="60" rx="10" fill="none" stroke="#d97c42" stroke-width="1" opacity="0.2"/>
+                            <!-- Spark particles -->
+                            <circle cx="250" cy="220" r="2" fill="#f5a942" opacity="0.5"/>
+                            <circle cx="270" cy="260" r="1.5" fill="#f5a942" opacity="0.4"/>
+                            <circle cx="230" cy="280" r="1" fill="#f5a942" opacity="0.3"/>
+                            <circle cx="280" cy="300" r="2" fill="#f5a942" opacity="0.5"/>
+                            <!-- Spark lines -->
+                            <line x1="240" y1="240" x2="260" y2="220" stroke="#f5a942" stroke-width="0.5" opacity="0.3"/>
+                            <line x1="260" y1="260" x2="280" y2="240" stroke="#f5a942" stroke-width="0.5" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="app-content">
+                        <p class="app-description">Content creation and drafting assistant. Forge streamlines the first-draft workflow, enabling analysts to build comprehensive briefings and reports with intelligent templates and automation.</p>
+                    </div>
+
+                    <div class="app-footer">
+                        <div class="app-badge">
+                            <svg class="badge-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="30" y="60" width="60" height="15" fill="#f5f5f0" rx="2"/>
-                                <!-- Anvil pedestal -->
                                 <rect x="45" y="75" width="30" height="20" fill="#f5f5f0" rx="1"/>
-                                <!-- Hammer head -->
                                 <rect x="55" y="35" width="16" height="20" fill="#f5f5f0" rx="1"/>
-                                <!-- Hammer handle -->
                                 <line x1="63" y1="35" x2="63" y2="15" stroke="#f5f5f0" stroke-width="3"/>
-                                <!-- Sparks -->
                                 <circle cx="75" cy="40" r="2.5" fill="#c4a050"/>
                                 <circle cx="82" cy="48" r="2" fill="#c4a050" opacity="0.7"/>
                                 <circle cx="88" cy="35" r="1.5" fill="#c4a050" opacity="0.5"/>
-                                <!-- Spark lines -->
                                 <line x1="75" y1="40" x2="80" y2="33" stroke="#c4a050" stroke-width="1" opacity="0.6"/>
                                 <line x1="75" y1="40" x2="85" y2="45" stroke="#c4a050" stroke-width="1" opacity="0.6"/>
                             </svg>
                         </div>
-                        <h3>Forge</h3>
-                    </div>
-                    <p class="app-description">Content creation and drafting assistant. Forge streamlines the first-draft workflow, enabling analysts to build comprehensive briefings and reports with intelligent templates and automation.</p>
-                    <div class="app-footer">
-                        <div class="app-links">
-                            <a href="#" class="app-link">Launch App</a>
-                            <a href="#" class="app-link">Tutorial</a>
+                        <div class="app-title-section">
+                            <h3>FORGE</h3>
+                            <div class="app-accent-line"></div>
                         </div>
-                        <a href="#" class="app-learn-more">Learn more →</a>
+                        <a href="#" class="app-launch">LAUNCH <span class="arrow">→</span></a>
                     </div>
                 </div>
 
                 <!-- Sage - Jade -->
                 <div class="app-box app-sage">
-                    <div class="app-header">
-                        <div class="app-icon">
-                            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Sage: Scroll/Book with wisdom symbol -->
-                                <!-- Left scroll roll -->
+                    <div class="app-background">
+                        <svg class="app-pattern" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice">
+                            <defs>
+                                <filter id="shadow-sage">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+                                </filter>
+                            </defs>
+                            <!-- Leafy silhouette -->
+                            <circle cx="200" cy="150" r="70" fill="none" stroke="#5a9b7f" stroke-width="1" opacity="0.2" filter="url(#shadow-sage)"/>
+                            <!-- Leaf shapes -->
+                            <path d="M 180 120 Q 170 150 180 180" fill="none" stroke="#6aab8f" stroke-width="1" opacity="0.3"/>
+                            <path d="M 200 100 Q 210 150 200 200" fill="none" stroke="#6aab8f" stroke-width="1" opacity="0.3"/>
+                            <path d="M 220 120 Q 230 150 220 180" fill="none" stroke="#6aab8f" stroke-width="1" opacity="0.3"/>
+                            <!-- Decorative circles -->
+                            <circle cx="150" cy="200" r="1.5" fill="#7aab9f" opacity="0.2"/>
+                            <circle cx="200" cy="250" r="1.5" fill="#7aab9f" opacity="0.2"/>
+                            <circle cx="250" cy="220" r="1.5" fill="#7aab9f" opacity="0.2"/>
+                            <!-- Subtle lines -->
+                            <line x1="200" y1="100" x2="200" y2="300" stroke="#5a9b7f" stroke-width="0.5" opacity="0.1"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="app-content">
+                        <p class="app-description">Editorial intelligence and insights platform. Sage uses AI to recommend editorial improvements, flag important context, and suggest angles that elevate the final analysis.</p>
+                    </div>
+
+                    <div class="app-footer">
+                        <div class="app-badge">
+                            <svg class="badge-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="35" cy="60" r="8" fill="none" stroke="#f5f5f0" stroke-width="2"/>
-                                <!-- Right scroll roll -->
                                 <circle cx="85" cy="60" r="8" fill="none" stroke="#f5f5f0" stroke-width="2"/>
-                                <!-- Scroll paper -->
                                 <path d="M 43 45 L 77 45 L 77 75 L 43 75 Z" fill="none" stroke="#f5f5f0" stroke-width="1.5"/>
-                                <!-- Text lines on scroll -->
                                 <line x1="48" y1="52" x2="72" y2="52" stroke="#f5f5f0" stroke-width="1" opacity="0.6"/>
                                 <line x1="48" y1="58" x2="72" y2="58" stroke="#f5f5f0" stroke-width="1" opacity="0.6"/>
                                 <line x1="48" y1="64" x2="68" y2="64" stroke="#f5f5f0" stroke-width="1" opacity="0.6"/>
-                                <!-- Wisdom accent: decorative symbol above scroll -->
                                 <circle cx="60" cy="28" r="5" fill="none" stroke="#c4a050" stroke-width="1.5" opacity="0.7"/>
                                 <path d="M 60 23 L 60 33" stroke="#c4a050" stroke-width="1" opacity="0.5"/>
                                 <path d="M 55 28 L 65 28" stroke="#c4a050" stroke-width="1" opacity="0.5"/>
                             </svg>
                         </div>
-                        <h3>Sage</h3>
-                    </div>
-                    <p class="app-description">Editorial intelligence and insights platform. Sage uses AI to recommend editorial improvements, flag important context, and suggest angles that elevate the final analysis.</p>
-                    <div class="app-footer">
-                        <div class="app-links">
-                            <a href="#" class="app-link">Launch App</a>
-                            <a href="#" class="app-link">Tutorial</a>
+                        <div class="app-title-section">
+                            <h3>SAGE</h3>
+                            <div class="app-accent-line"></div>
                         </div>
-                        <a href="#" class="app-learn-more">Learn more →</a>
+                        <a href="#" class="app-launch">LAUNCH <span class="arrow">→</span></a>
                     </div>
                 </div>
             </div>
